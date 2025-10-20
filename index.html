@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomas José Sony | Empreendedor e Especialista em TI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0; /* slate-200 */
+        }
+        #hero-canvas, #footer-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .hero-content, .footer-content {
+            position: relative;
+            z-index: 1;
+        }
+        .section-title {
+            background: -webkit-linear-gradient(45deg, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: rgba(23, 23, 23, 0.8);
+            border: 1px solid #27272a;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="w-full">
+    <header class="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-md z-50 border-b border-zinc-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">TJS.</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#specializations" class="text-slate-300 hover:text-sky-400 transition-colors">Especializações</a>
+                <a href="#projects" class="text-slate-300 hover:text-sky-400 transition-colors">Projetos</a>
+                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-content max-w-3xl flex flex-col items-center">
+                <img src="WhatsApp Image 2025-10-09 at 12.19.29.jpeg" alt="Foto de Tomas José Sony" class="w-40 h-40 rounded-full object-cover border-4 border-slate-700 shadow-lg mb-6">
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">Tomas José Sony</h1>
+                <p class="mt-4 text-xl md:text-2xl font-light text-slate-300">Empreendedor Visionário, Especialista em Tecnologia da Informação e Marketing Digital.</p>
+                <a href="#projects" class="mt-8 inline-block bg-sky-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-sky-600 transition-colors shadow-lg shadow-sky-500/20">Ver Projetos</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 fade-in-section">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold section-title mb-6">Sobre Mim</h2>
+                <p class="text-lg text-slate-400 leading-relaxed">
+                    Com uma sólida formação em Engenharia Informática e Comunicações e Contabilidade, combino habilidades técnicas avançadas com uma visão estratégica para resolver problemas complexos no mundo digital. A minha paixão é transformar ideias inovadoras em realidade, agregando valor tangível aos meus clientes e parceiros.
+                </p>
+            </div>
+        </section>
+
+        <section id="specializations" class="py-20 fade-in-section">
+            <h2 class="text-3xl font-bold section-title text-center mb-12">Experiência e Especializações</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-xl">
+                    <i class="fas fa-code text-3xl text-sky-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Desenvolvimento Web & Apps</h3>
+                    <p class="text-slate-400">Criação de websites e aplicações personalizadas com foco na usabilidade, design responsivo e tecnologias modernas como React, Node.js, e Python.</p>
+                </div>
+                <div class="card p-8 rounded-xl">
+                    <i class="fas fa-bullhorn text-3xl text-violet-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Marketing Digital</h3>
+                    <p class="text-slate-400">Implementação de estratégias completas, incluindo SEO, campanhas (Google/Facebook Ads), gestão de redes sociais e automação para impulsionar o crescimento.</p>
+                </div>
+                <div class="card p-8 rounded-xl">
+                    <i class="fas fa-lightbulb text-3xl text-amber-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Inovação Tecnológica</h3>
+                    <p class="text-slate-400">Exploração de áreas emergentes como IA, machine learning e blockchain para criar soluções disruptivas e alinhadas com as futuras demandas do mercado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 fade-in-section">
+            <h2 class="text-3xl font-bold section-title text-center mb-12">Empresas e Projetos Fundados</h2>
+            <div class="space-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-white">OSONY TEC</h3>
+                        <p class="text-sky-400 font-semibold mb-4">Líder em Marketing Digital e Desenvolvimento Web</p>
+                        <p class="text-slate-400 mb-4">Ajudamos mais de 50 empresas a aumentar a sua presença online. Oferecemos criação de sites, sistemas personalizados e consultoria em tecnologia.</p>
+                        <a href="http://www.osonytec.com" target="_blank" class="text-white font-semibold hover:text-sky-400 transition-colors">Visitar Site <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-rocket text-8xl text-zinc-700"></i>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:order-last">
+                        <i class="fas fa-newspaper text-8xl text-zinc-700"></i>
+                    </div>
+                    <div class="card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-white">ACENAS (Revista Digital)</h3>
+                        <p class="text-violet-400 font-semibold mb-4">Democratizando o Acesso à Informação</p>
+                        <p class="text-slate-400 mb-4">Uma revista digital dedicada a promover conteúdos sobre tecnologia, negócios e cultura, com milhares de leitores mensais e colaboradores internacionais.</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-white">Mundinho APP</h3>
+                        <p class="text-amber-400 font-semibold mb-4">Plataforma para Artistas Independentes</p>
+                        <p class="text-slate-400 mb-4">Premiado como "Melhor Iniciativa Tecnológica Local" em 2022, este aplicativo oferece uma plataforma intuitiva para músicos compartilharem seu trabalho.</p>
+                    </div>
+                     <div class="text-center">
+                        <i class="fas fa-music text-8xl text-zinc-700"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="why-me" class="py-20 fade-in-section">
+             <h2 class="text-3xl font-bold section-title text-center mb-12">Porquê Trabalhar Comigo?</h2>
+             <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                 <div class="card p-6 rounded-lg">
+                    <h3 class="font-semibold text-white">Experiência Comprovada</h3>
+                    <p class="text-sm text-slate-400 mt-2">Mais de 8 anos a entregar resultados concretos em tecnologia e marketing.</p>
+                 </div>
+                 <div class="card p-6 rounded-lg">
+                    <h3 class="font-semibold text-white">Inovação Constante</h3>
+                    <p class="text-sm text-slate-400 mt-2">Sempre a buscar novas formas de resolver problemas e melhorar a experiência do utilizador.</p>
+                 </div>
+                 <div class="card p-6 rounded-lg">
+                    <h3 class="font-semibold text-white">Compromisso</h3>
+                    <p class="text-sm text-slate-400 mt-2">A satisfação do cliente é a minha prioridade, garantindo eficiência e criatividade.</p>
+                 </div>
+                 <div class="card p-6 rounded-lg">
+                    <h3 class="font-semibold text-white">Visão Global</h3>
+                    <p class="text-sm text-slate-400 mt-2">Compreensão dos mercados locais e internacionais para adaptar as soluções.</p>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="relative overflow-hidden bg-zinc-900/50 border-t border-zinc-800 mt-20 fade-in-section">
+        <canvas id="footer-canvas"></canvas>
+        <div class="footer-content container mx-auto px-6 py-16 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Vamos Construir Algo Incrível</h2>
+            <p class="max-w-2xl mx-auto text-slate-400 mb-8">
+                Seja através das minhas empresas ou em parcerias individuais, estou pronto para levar o seu negócio ao próximo nível. Entre em contato e vamos transformar a sua ideia em realidade.
+            </p>
+            <a href="mailto:tomassony@osonytec.com" class="text-sky-400 text-lg hover:underline mb-8 inline-block">tomassony@osonytec.com</a>
+            <div class="text-slate-400 mb-8">
+                <p>+244 921 174 283 | +244 954 930 615</p>
+            </div>
+            <div class="flex justify-center space-x-6 text-2xl text-slate-400">
+                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="text-sm text-zinc-500 mt-12">&copy; 2024 Tomas José Sony. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Lógica de Animação de Partículas Reutilizável ---
+        const runParticleAnimation = (canvasId) => {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const parentElement = canvas.parentElement;
+            let particlesArray;
+            let initialParticleCount;
+
+            // Função para definir o tamanho do canvas com base no elemento pai
+            const resizeCanvas = () => {
+                canvas.width = parentElement.offsetWidth;
+                canvas.height = parentElement.offsetHeight;
+            };
+
+            class Particle {
+                constructor(x, y, directionX, directionY, size) {
+                    this.x = x;
+                    this.y = y;
+                    this.directionX = directionX;
+                    this.directionY = directionY;
+                    this.size = size;
+                    this.opacity = 1;
+                    this.isFading = false;
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    // --- CORREÇÃO APLICADA AQUI ---
+                    ctx.fillStyle = `rgba(56, 189, 248, ${this.opacity})`; // Cor sky-400
+                    ctx.fill();
+                }
+                
+                fadeOut() {
+                    this.isFading = true;
+                }
+
+                update() {
+                    if (this.x + this.size > canvas.width || this.x - this.size < 0) {
+                        this.directionX = -this.directionX;
+                    }
+                    if (this.y + this.size > canvas.height || this.y - this.size < 0) {
+                        this.directionY = -this.directionY;
+                    }
+                    
+                    if (this.isFading && this.opacity > 0.05) {
+                        this.opacity -= 0.05;
+                    } else if (this.isFading && this.opacity <= 0.05) {
+                        this.opacity = 0;
+                    }
+
+                    this.x += this.directionX;
+                    this.y += this.directionY;
+                    this.draw();
+                }
+            }
+
+            function createParticle() {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((canvas.width - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((canvas.height - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 2.4) - 1.2; // Velocidade
+                let directionY = (Math.random() * 2.4) - 1.2; // Velocidade
+                return new Particle(x, y, directionX, directionY, size);
+            }
+
+            function init() {
+                resizeCanvas();
+                particlesArray = [];
+                // Densidade de partículas ajustada para o rodapé ser menos denso
+                const density = canvasId === 'hero-canvas' ? 9000 : 15000;
+                initialParticleCount = Math.floor((canvas.width * canvas.height) / density);
+                for (let i = 0; i < initialParticleCount; i++) {
+                    particlesArray.push(createParticle());
+                }
+            }
+
+            function handleCollisions() {
+                for (let i = 0; i < particlesArray.length; i++) {
+                    if (particlesArray[i].isFading) continue;
+                    for (let j = i + 1; j < particlesArray.length; j++) {
+                        if (particlesArray[j].isFading) continue;
+                        const dx = particlesArray[i].x - particlesArray[j].x;
+                        const dy = particlesArray[i].y - particlesArray[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < particlesArray[i].size + particlesArray[j].size) {
+                            particlesArray[i].fadeOut();
+                            particlesArray[j].fadeOut();
+                        }
+                    }
+                }
+            }
+
+            function connect() {
+                for (let a = 0; a < particlesArray.length; a++) {
+                    for (let b = a + 1; b < particlesArray.length; b++) {
+                        let distance = Math.sqrt(Math.pow(particlesArray[a].x - particlesArray[b].x, 2) + Math.pow(particlesArray[a].y - particlesArray[b].y, 2));
+                        if (distance < 100) {
+                            const opacityBasedOnDistance = 1 - (distance / 100);
+                            const combinedOpacity = Math.min(particlesArray[a].opacity, particlesArray[b].opacity, opacityBasedOnDistance);
+                            if (combinedOpacity > 0) {
+                                // --- CORREÇÃO APLICADA AQUI ---
+                                ctx.strokeStyle = `rgba(167, 139, 250, ${combinedOpacity})`; // Cor violet-400
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                                ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                handleCollisions();
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+                connect();
+                particlesArray = particlesArray.filter(p => p.opacity > 0);
+                while (particlesArray.length < initialParticleCount) {
+                    particlesArray.push(createParticle());
+                }
+            }
+
+            window.addEventListener('resize', init);
+            init();
+            animate();
+        };
+
+        // Iniciar as animações para o hero e o rodapé
+        runParticleAnimation('hero-canvas');
+        runParticleAnimation('footer-canvas');
+
+        // --- Animação de Fade-in com Scroll ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
